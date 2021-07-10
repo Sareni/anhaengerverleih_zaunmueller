@@ -28,8 +28,8 @@ div.header {
 
 div.header > div {
     min-height: 100px;
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 640px;
+    min-width: 640px;
     flex: 1;
 }
 
@@ -55,6 +55,7 @@ h1, h2, h3 {
     background-color: rgb(0,138,242);
     color: white;
     border-radius: 4px;
+    width: 300px;
 }
 
 .content_bold {
@@ -98,47 +99,61 @@ div.menu {
     background-color: rgb(0,138,242);
     border-radius: 4px;
 }
-div.content {
+div.content, div.content_solo {
     max-width: 1280px;
     margin: 30px auto 60px auto;
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
 }
-div.content > div {
+
+div.content > div, div.content_solo > div {
     background-color: white;
     border: 8px solid lightgrey;
-    width: 290px;
-    margin-top: 20px;
+    min-width: 200px;
     border-radius: 4px;
     text-align: center;
 }
 
-div.content div.content_image {
+div.content > div {
+    margin: 5px;
+}
+
+div.content_solo > div {
+    margin: 5px auto 5px auto;
+}
+
+div.content_solo div.content_image,
+div.content a.content_image {
+    display: block;
     background-color: rgb(36,41,45);
     color: white;
 }
-div.content_image img {
+div.content_image img, a.content_image img {
     width: 100%;
 }
 
+a.content_image {
+    text-decoration: none;
+}
 
-div.content div.content_text {
+
+div.content div.content_text, div.content_solo div.content_text {
     margin: 20px 30px 20px 40px;
     line-height: 150%;
     font-size: 16px;
 }
 
-div.content div.content_text ul {
+div.content div.content_text ul, div.content_solo div.content_text ul {
     list-style: none;
     margin: 20px 0;
 }
 
-div.content div.content_text li {
+div.content div.content_text li, div.content_solo div.content_text li {
     margin: 4px 0;
 }
 
-div.content div.content_text a {
+div.content div.content_text a, div.content_solo div.content_text a {
     display: block;
     width: 200px;
     background-color: rgb(0,138,242);
@@ -159,7 +174,8 @@ div.blue_box:hover {
     background-color: rgb(36,41,45);
 }
 
-div.content div.content_text a:hover {
+div.content div.content_text a:hover,
+div.content_solo div.content_text a:hover {
     background-color: rgb(36,41,45);
 }
 
@@ -187,7 +203,6 @@ div.placeholder {
     margin: 30px;
 }
 
-
 div.footer {
     background-color: rgb(36,41,45);
     min-height: 50px;
@@ -196,13 +211,46 @@ div.footer {
     text-align: center;
     color: white;
 }
+div.small_content_text {
+    display: none;
+    color: white;
+    background-color: rgb(36,41,45);
+    padding-bottom: 10px;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+}
 
 @media all and (max-width: 960px) {
     .menu ul, .header, .content {
         flex-wrap: wrap;
     }
-    .menu li, .header > div, .content > div {
+    .menu li, .header > div {
         flex: 1 1 50%;
         flex-basis: 100%;
     }
+    .content > div {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    div.content div.content_text {
+        display: none;
+    }
+    div.header > div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.header h1 {
+        text-align: center;
+    }
+    .blue_box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.small_content_text {
+        display: block;
+    }
+    
 }
