@@ -28,8 +28,8 @@ div.header {
 
 div.header > div {
     min-height: 100px;
-    max-width: 640px;
-    min-width: 640px;
+    max-width: 300px;
+    min-width: 300px;
     flex: 1;
 }
 
