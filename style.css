@@ -249,8 +249,20 @@ div.small_content_text {
         margin-left: auto;
         margin-right: auto;
     }
+    .blue_box a {
+        font-size: 11px;
+        text-align: center;
+    }
     div.small_content_text {
         display: block;
+    }
+    
+    div.small_content_text {
+        display: block;
+    }
+
+    a.content_image h3 {
+        font-size: 14px;
     }
     
 }
