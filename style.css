@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, Arial, sans-serif;
 }
 
 
 html {
-  font-family: "Century Gothic", CenturyGothic, sans-serif;
+  /*font-family: "Qahiri", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal;*/
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -108,7 +110,7 @@ div.content, div.content_solo {
 }
 
 div.content > div, div.content_solo > div {
-    background-color: rgb(36,41,45);
+    background-color: white;
     border: 8px solid lightgrey;
     min-width: 200px;
     border-radius: 4px;
@@ -156,7 +158,8 @@ div.content div.content_text li, div.content_solo div.content_text li {
 
 div.content div.content_text a, div.content_solo div.content_text a {
     display: block;
-    width: 200px;
+    max-width: 200px;
+    min-width: 100px;
     background-color: rgb(0,138,242);
     color: white;
     transition: 0.2s;
@@ -232,8 +235,9 @@ div.small_content_text {
         flex: 1 1 50%;
         flex-basis: 100%;
     }
-    .content > div {
+    div.content > div {
         flex: 1 1 calc(50% - 20px);
+        background-color: rgb(36,41,45);
     }
 
     div.content div.content_text {
