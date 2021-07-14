@@ -12,12 +12,17 @@ html {
   font-weight: 400;
   font-style: normal;*/
   font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  height: 1px;
 }
 
 body {
     background-color: rgb(1,63,125);
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     min-width: 430px;
+    min-height: 100%;
+    height: 1px;
+
 }
 div.header {
     background-color: rgb(1,63,125);
@@ -195,6 +200,10 @@ div.content_normal {
     padding: 0 10px;
 }
 
+div.content_normal, div.content {
+    min-height: calc(100% - 330px);
+}
+
 div.content_normal p {
     padding: 5px;
 }
@@ -210,7 +219,7 @@ div.placeholder {
 div.footer {
     background-color: rgb(36,41,45);
     min-height: 50px;
-    margin: 5 0;
+    margin: 5px 0;
     padding: 16px 0;
     text-align: center;
     color: white;
@@ -243,6 +252,11 @@ div.small_content_text {
     div.content div.content_text {
         display: none;
     }
+
+    div.content_normal, div.content {
+        min-height: calc(100% - 425px);
+    }
+
     div.header > div {
         margin-left: auto;
         margin-right: auto;
