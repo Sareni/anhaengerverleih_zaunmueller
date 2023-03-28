@@ -124,7 +124,7 @@ div.content, div.content_solo {
 div.content > div, div.content_solo > div {
     background-color: white;
     border: 8px solid lightgrey;
-    max-width: 412px;
+    flex: 1 1 calc(33% - 20px);
     border-radius: 4px;
     text-align: center;
 }
@@ -168,7 +168,7 @@ div.content div.content_text li, div.content_solo div.content_text li {
     margin: 4px 0;
 }
 
-div.content div.content_text a, div.content_solo div.content_text a {
+div.content div.content_text a.content_button, div.content_solo div.content_text a.content_button {
     display: block;
     max-width: 200px;
     min-width: 100px;
@@ -182,6 +182,14 @@ div.content div.content_text a, div.content_solo div.content_text a {
     border-radius: 4px;
 }
 
+a {
+    color: rgb(0,138,242);;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
 .blue_box a {
     color: white;
     text-decoration: none;
@@ -190,8 +198,8 @@ div.blue_box:hover {
     background-color: rgb(57, 65, 71);
 }
 
-div.content div.content_text a:hover,
-div.content_solo div.content_text a:hover {
+div.content div.content_text a.content_button:hover,
+div.content_solo div.content_text a.content_button:hover {
     background-color: rgb(57, 65, 71);
 }
 
@@ -249,11 +257,15 @@ div.footer a {
     text-decoration: none;
 }
 
+div.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 div.content > div.content-placeholder {
     display: block;
     border:none;
     background-color: rgb(1,63,125);
-    max-width: 412px;
     width: 100%
 }
 
