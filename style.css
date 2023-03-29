@@ -137,12 +137,23 @@ div.content_solo > div {
     margin: 5px auto 5px auto;
 }
 
-div.content_solo div.content_image,
 div.content a.content_image {
     display: block;
     background-color: rgb(36,41,45);
     color: white;
 }
+
+div.content_solo div.content_image {
+    display: block;
+}
+
+div.content_solo div.content_image div {
+    display: block;
+    background-color: rgb(36,41,45);
+    color: white;
+}
+
+
 div.content_image img, a.content_image img {
     width: 100%;
 }
@@ -151,6 +162,9 @@ a.content_image {
     text-decoration: none;
 }
 
+.social_media p {
+    margin-top: 2px;
+}
 
 div.content div.content_text, div.content_solo div.content_text {
     padding: 20px 30px 20px 40px;
@@ -272,6 +286,10 @@ div.content > div.content-placeholder {
 .map {
     width: 100%;
     height: 450px;
+}
+
+.content_image img {
+    max-width: 500px;
 }
 
 @media all and (max-width: 960px) {
